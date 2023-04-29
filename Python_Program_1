@@ -1,0 +1,50 @@
+#code:-
+-------
+
+print('''Welcome sir/madam, Available books are:
+Introduction to Python Programming(Rs 499.00)
+Python Libraries Cookbook(Rs. 855.00)           
+Data Science in Python(Rs. 645.00)''')
+print("_____________________________________________\n")
+no_books = int(input("How many books do you want: "))
+total_books_price = 0   #actual price of the all selected  books
+while(no_books>=1):     
+    book_name = input("Enter the name of the book : ")
+    price =float(input("Enter the price of {} : ".format(book_name)))
+    print("---------------------------------------------")
+    total_books_price += price
+    no_books -= 1
+gst = (total_books_price*12)/100
+overall_price = total_books_price + gst + 250.00
+print("GST = 12%\nDelivery Charge = 250\n") 
+print("-----------------------")
+print("Total bill = {}".format(overall_price))  #Displaying the final price
+print("-----------------------")
+
+
+#output:-
+--------
+
+
+Welcome sir/madam, Available books are:
+Introduction to Python Programming(Rs 499.00)
+Python Libraries Cookbook(Rs. 855.00)           
+Data Science in Python(Rs. 645.00)
+_____________________________________________
+
+How many books do you want: 3
+Enter the name of the book : Introduction to Python Programming
+Enter the price of Introduction to Python Programming : 499.00
+---------------------------------------------
+Enter the name of the book : Python Libraries Cookbook
+Enter the price of Python Libraries Cookbook : 855.00
+---------------------------------------------
+Enter the name of the book : Data Science in Python
+Enter the price of Data Science in Python : 645.00
+---------------------------------------------
+GST = 12%
+Delivery Charge = 250
+
+-----------------------
+Total bill = 2488.88
+-----------------------
