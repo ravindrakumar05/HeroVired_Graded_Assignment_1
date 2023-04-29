@@ -1,0 +1,16 @@
+#code:
+------
+
+input_string = input("string1: ").lower() #Taking input from the user
+output = []                               #appending unique letter to the list
+for ch in input_string:
+    if ch not in output:
+        output.append(ch)
+print("uniqueLetters = ",end='')
+print(*output,sep=",")                   #final output
+
+
+output:
+------
+string1: Dedication
+uniqueLetters = d,e,i,c,a,t,o,n
